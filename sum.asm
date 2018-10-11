@@ -1,4 +1,4 @@
-    .text
+	.text
 	addu	$s0,$zero,$zero		# s0 = 0
 	addu	$s1,$zero,$zero		# s1 = 0
    	addiu	$v0,$zero,5		# v0 = read value 

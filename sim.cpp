@@ -11,6 +11,7 @@
 *
 ******************************************************/
 #include <iostream>
+#include <fstream>
 
 #define MAXLINE 80
 #define MAXREG  5
@@ -36,11 +37,18 @@ public:
 void validate(int n){
 
 }
+int log(){
+    std::ofstream myfile;
+    myfile.open ("log.txt");
+    myfile << "Writing this to a file.\n";
+    myfile.close();
+    return 0;
+}
 int main() {
 
     char line[MAXLINE] = {0}, newLine[MAXLINE] = {0};
     char str1[MAXLINE], str2[MAXLINE];
-    char int1[MAXLINE], int2[MAXLINE];
+    int int1, int2;
     int totalTextLines = 0;
     int totalDataLines = 0;
     int lineCount = 1;
@@ -60,6 +68,5 @@ int main() {
         }
         lineCount++;
     }
-
     return 0;
 }
